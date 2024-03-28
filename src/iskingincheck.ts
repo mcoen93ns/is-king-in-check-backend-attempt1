@@ -38,3 +38,7 @@ export function setUpChessboard(): string[][] {
 
   return chessboardIncludingRook;
 }
+
+export function determineIfKingIsInCheck(): boolean {
+  return false;
+}

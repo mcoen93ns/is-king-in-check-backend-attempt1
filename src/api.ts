@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { setUpChessboard } from "./iskingincheck";
+import { determineIfKingIsInCheck, setUpChessboard } from "./iskingincheck";
 
 // Create a new express application instance
 export const app: express.Application = express();
@@ -10,6 +10,7 @@ app.use(express.json());
 app.get("/game", (req: Request, res: Response) => {
   const chessboardStatus = {
     chessboard: setUpChessboard(),
+    isKingInCheck: determineIfKingIsInCheck(),
   };
 
   res.json({

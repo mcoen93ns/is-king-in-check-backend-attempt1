@@ -1,6 +1,7 @@
 import {
   createEmptyChessBoard,
   placePieceOnChessboard,
+  determineIfKingIsInCheck
 } from "../../src/iskingincheck";
 
 describe("Greetings reader, welcome to the unit test suite for Is King In Check. Here you shall find all the itty gritty details on how this works.", () => {
@@ -42,6 +43,13 @@ describe("Greetings reader, welcome to the unit test suite for Is King In Check.
       const output = placePieceOnChessboard(chessboard, row, column, piece);
 
       expect(output[row][column]).toBe("R");
+    });
+  });
+  describe("When the board is all set up and ready to go, we have to determine if the King is in check or not.", () => {
+    it("For now, we have a hard-coded outcome. Namely: false", () => {
+      const output = determineIfKingIsInCheck();
+
+      expect(output).toBeFalsy();
     });
   });
 });

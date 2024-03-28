@@ -21,9 +21,7 @@ defineFeature(feature, (test) => {
 
     given(
       "the API consumer is ready to get the outcome of Is King In Check",
-      () => {
-        // do nothing?
-      }
+      () => {}
     );
 
     when("the API consumer invokes the IsKingInCheck API", async () => {
@@ -35,21 +33,22 @@ defineFeature(feature, (test) => {
     });
 
     and("the response contains a chessboard", () => {
-      expect(response.body).toHaveProperty("chessboard");
+      expect(response.body.chessboardStatus).toHaveProperty("chessboard");
     });
 
     and("the king is placed at E1", () => {
-      expect(response.body.chessboard[0][0]).toBe("K");
+      expect(response.body.chessboardStatus.chessboard[7][4]).toBe("K");
     });
 
     and("the rook is placed at A5", () => {
-      expect(response.body.chessboard[0][0]).toBe("R");
+      expect(response.body.chessboardStatus.chessboard[3][0]).toBe("R");
     });
 
     and(
       "an attribute is present that indicates if the king is in check or not.",
       () => {
-        expect(response.body.IsKingInCheck).toBeFalsy();
+        expect(response.body.chessboardStatus.isKingInCheck).toBeDefined();
+        expect(response.body.chessboardStatus.isKingInCheck).toBeFalsy();
       }
     );
   });
