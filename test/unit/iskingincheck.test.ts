@@ -1,7 +1,7 @@
 import {
   createEmptyChessBoard,
   placePieceOnChessboard,
-  determineIfKingIsInCheck
+  determineIfKingIsInCheck,
 } from "../../src/iskingincheck";
 
 describe("Greetings reader, welcome to the unit test suite for Is King In Check. Here you shall find all the itty gritty details on how this works.", () => {
