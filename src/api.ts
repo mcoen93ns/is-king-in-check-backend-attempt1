@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import { setUpChessboard } from "./iskingincheck";
 
 // Create a new express application instance
 export const app: express.Application = express();
@@ -6,11 +7,13 @@ export const app: express.Application = express();
 app.use(express.json());
 
 // Define the POST endpoint
-app.post("/dummy", (req: Request, res: Response) => {
-  const response = "Hello World!";
+app.get("/game", (req: Request, res: Response) => {
+  const chessboardStatus = {
+    chessboard: setUpChessboard(),
+  };
 
   res.json({
-    response,
+    chessboardStatus,
   });
 });
 
