@@ -5,10 +5,10 @@ describe("This is the component test suite for Is King In Check. Welcome, dear r
     it("When the chessboard is set up, an empty board is created and the King and an other piece are placed on it", () => {
       const output: string[][] = setUpChessboard();
 
-      expect(output.length).toBe(8); // Check for 8 rows
+      expect(output.length).toBe(8);
       output.forEach((row) => {
         expect(Array.isArray(row)).toBe(true);
-        expect(row.length).toBe(8); // Check for 8 columns in each row
+        expect(row.length).toBe(8);
       });
 
       const hasKing = output.some((row) => row.includes("K"));

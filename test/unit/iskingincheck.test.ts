@@ -3,6 +3,7 @@ import {
   placePieceOnChessboard,
   determineIfKingIsInCheck,
 } from "../../src/iskingincheck";
+// import { chessboardKingAtE1RookAtA5 } from "../stub/stub";
 
 describe("Greetings reader, welcome to the unit test suite for Is King In Check. Here you shall find all the itty gritty details on how this works.", () => {
   describe("Since this is based on chess, we need a chessboard..", () => {
@@ -51,5 +52,11 @@ describe("Greetings reader, welcome to the unit test suite for Is King In Check.
 
       expect(output).toBeFalsy();
     });
+    // it("When the King is at E1 and a Rook is at A5, the King is not in check", () => {
+    //   const input = chessboardKingAtE1RookAtA5;
+    //   const output = determineIfKingIsInCheck(input);
+
+    //   expect(output).toBeFalsy();
+    // });
   });
 });
