@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 
 // Create a new express application instance
-const app: express.Application = express();
+export const app: express.Application = express();
 
 app.use(express.json());
 
@@ -15,6 +15,6 @@ app.post("/dummy", (req: Request, res: Response) => {
 });
 
 // The server is listening on port 3000
-app.listen(3000, () => {
+export const server = app.listen(3000, () => {
   console.log("App is listening on port 3000!");
 });

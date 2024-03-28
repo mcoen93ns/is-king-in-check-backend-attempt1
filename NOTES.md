@@ -1,5 +1,8 @@
-//TODO
-- retrieve dockeruser name / password from env variables ✅
--  set docker username/password in GIT ✅
--  Make a snyk project?
--  Add Dockerfile to the cookie cutter ⚡
+# Notes
+
+## Hardcoded scenario
+
+### Pomodoro 1
+
+✅ Create end to end test
+✅ Create component test for creating the chessboard and placing the pieces on it
