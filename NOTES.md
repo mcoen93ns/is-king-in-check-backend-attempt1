@@ -20,7 +20,7 @@
 ✅ Create unit: determine if the king is in check
 - hard-coded: false
 ✅ Finalize end to end test by implementing the remaining functionality
-🙋‍♂️ CICD: get the code through the pipeline
-CICD: get the docker image running locally
-CICD: test using Postman
-CICD: test using front-end
+✅ CICD: get the code through the pipeline
+✅ CICD: get the docker image running locally
+✅ CICD: test using Postman
+🙋‍♂️ CICD: test using front-end
